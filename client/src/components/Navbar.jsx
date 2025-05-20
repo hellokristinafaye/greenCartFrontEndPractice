@@ -47,8 +47,13 @@ const Navbar = () => {
                 {/* setOpen(false) means the menu closes whenever a link is clicked */}
                 <NavLink to='/' onClick={()=> setOpen(false)}>Home</NavLink>
                 <NavLink to='/products' onClick={() => setOpen(false)}>All Products</NavLink>
+
+
                 {/* conditional for user being logged in or not */}
+                {user &&   
                 <NavLink to='/products' onClick={()=> setOpen(false)}>My Orders</NavLink>
+            }
+                <NavLink to='/' onClick={()=> setOpen(false)}>Contact</NavLink>
               
                 <button className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                     Login
