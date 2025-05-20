@@ -9,9 +9,11 @@ export const AppContextProvider = ({ children }) => {
     // state variables
     const [user, setUser] = useState(null);
     const [isSeller, setIsSeller] = useState(false);
+    const [showUserLogin, setShowUserLogin] = useState(false);
+
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
-    const value = {navigate, user, setUser, isSeller, setIsSeller}
+    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin}
 
     return <AppContext.Provider value={value}>
         {children}
