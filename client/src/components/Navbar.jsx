@@ -1,10 +1,13 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom';
 import { assets } from '../assets/assets'
+import { useAppContext } from '../context/AppContext';
 
 const Navbar = () => {
 
     const [open, setOpen] = React.useState(false)
+    // allows us to use data from context, i.e. what links to display in the nav menu
+    const { user, setUser } = useAppContext();
 
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
@@ -43,10 +46,10 @@ const Navbar = () => {
             <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                 {/* setOpen(false) means the menu closes whenever a link is clicked */}
                 <NavLink to='/' onClick={()=> setOpen(false)}>Home</NavLink>
-                <NavLink to='/products' onClick={()=> setOpen(false)}>All Products</NavLink>
-                <a href="#" className="block">Home</a>
-                <a href="#" className="block">About</a>
-                <a href="#" className="block">Contact</a>
+                <NavLink to='/products' onClick={() => setOpen(false)}>All Products</NavLink>
+                {/* conditional for user being logged in or not */}
+                <NavLink to='/products' onClick={()=> setOpen(false)}>My Orders</NavLink>
+              
                 <button className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                     Login
                 </button>
