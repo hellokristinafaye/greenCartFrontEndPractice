@@ -11,7 +11,10 @@ const MainBanner = () => {
               <h1 className="">Freshness You Can Trust, Savings You Will Love! </h1>
           </div>
           <div className="">
-              <Link>Shop now <img src={assets.white_arrow_icon} alt="arrow icon" className="" /></Link>
+              <Link>
+                  Shop now
+                  <img src={assets.white_arrow_icon} alt="arrow icon" className="md:hidden transition group-focus:translate-x-1" />
+              </Link>
           </div>
     </div>
   )
