@@ -46,9 +46,9 @@ const Navbar = () => {
                     :
                     // displays if user IS logged in
                     (
-                        <div className="">
+                        <div className="relative group">
                             <img src={assets.profile_icon} alt="" className="w-10" />
-                            <ul className="">
+                            <ul className="hidden group-hover:block absolute top-10 right-0 bg-white shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40">
                                 <li className="">My Orders</li>
                                 <li className="">Logout</li>
                             </ul>
