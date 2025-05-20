@@ -56,7 +56,11 @@ const Navbar = () => {
 
                 {/* conditional for logout to show only when the user is logged in */}
                 {!user ? (
-                    <button className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
+                    <button
+                        onClick={() => {
+                            setOpen(false)
+                        }}
+                        className="cursor-pointer px-6 py-2 mt-2 bg-primary hover:bg-primary-dull transition text-white rounded-full text-sm">
                         Login
                     </button>
                 ) : (
