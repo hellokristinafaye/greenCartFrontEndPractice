@@ -7,7 +7,7 @@ export const AppContextProvider = ({ children }) => {
     // this is the function we use when we want a link to go somewhere instead of an href
     const navigate = useNavigate();
     // state variables
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState(true);
     const [isSeller, setIsSeller] = useState(false);
     const [showUserLogin, setShowUserLogin] = useState(false);
 
