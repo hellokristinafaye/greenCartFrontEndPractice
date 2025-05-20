@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const [open, setOpen] = React.useState(false)
     // allows us to use data from context, i.e. what links to display in the nav menu
-    const { user, setUser } = useAppContext();
+    const { user, setUser, setShowUserLogin } = useAppContext();
 
     return (
         <nav className="flex items-center justify-between px-6 md:px-16 lg:px-24 xl:px-32 py-4 border-b border-gray-300 bg-white relative transition-all">
