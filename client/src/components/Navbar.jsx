@@ -47,8 +47,10 @@ const Navbar = () => {
                 <img src={assets.menu_icon} alt="menu" className="" />
             </button>
 
-            {/* Mobile Menu */}
-            <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
+            {/* Mobile Menu, hidden on full screen */}
+
+            { open && (
+                <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
                 {/* setOpen(false) means the menu closes whenever a link is clicked */}
                 <NavLink to='/' onClick={()=> setOpen(false)}>Home</NavLink>
                 <NavLink to='/products' onClick={() => setOpen(false)}>All Products</NavLink>
@@ -77,7 +79,7 @@ const Navbar = () => {
                     </button>  
                 )}
               
-            </div>
+            </div>)}
 
         </nav>
     )
