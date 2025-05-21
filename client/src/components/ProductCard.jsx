@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 const ProductCard = () => {
     const [count, setCount] = React.useState(0);
@@ -63,3 +63,5 @@ const ProductCard = () => {
         </div>
     );
 };
+
+export default ProductCard;
