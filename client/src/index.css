@@ -1,8 +1,7 @@
-/* Tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 @import "tailwindcss";
 /* Google Font "Outfit */
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
+/* Tailwind */
 * {
   font-family: "Outfit", sans-serif;
 }
