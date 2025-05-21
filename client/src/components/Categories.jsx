@@ -8,7 +8,7 @@ const Categories = () => {
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 mt-6 gap-6">
               <div className="group cursor-pointer py-5 px-3 gap-2 rounded-lg flex flex-col justify-center items-center">
                   <img src={assets.box_icon} alt="" className="group-hover:scale-108 transition max-w-28" />
-                  <p className="">Fruit</p>
+                  <p className="text-sm font-medium">Fruit</p>
               </div>
           </div>
     </div>
