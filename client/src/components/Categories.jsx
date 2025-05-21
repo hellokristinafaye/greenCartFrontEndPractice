@@ -3,7 +3,7 @@ import { assets } from '../assets/assets'
 
 const Categories = () => {
   return (
-      <div>
+      <div className="mt-16">
           <p className="">Categories</p>
           <div className="">
               <div className="">
