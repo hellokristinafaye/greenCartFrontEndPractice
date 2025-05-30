@@ -18,6 +18,8 @@ Features:
 
 Notes:
 
+- Currently a WIP. The front end is partially built. Looks like we got to the PrebuiltUI component for the product card, and have yet to update it for the grocery store.
+
 Challenges:
 
 Future Development:
