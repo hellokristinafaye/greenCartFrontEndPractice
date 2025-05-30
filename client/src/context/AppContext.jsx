@@ -10,6 +10,7 @@ export const AppContextProvider = ({ children }) => {
     const [user, setUser] = useState(false);
     const [isSeller, setIsSeller] = useState(false);
     const [showUserLogin, setShowUserLogin] = useState(false);
+    const [products, setProducts] = useState([]);
 
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
