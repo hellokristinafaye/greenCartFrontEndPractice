@@ -13,8 +13,7 @@ const Login = () => {
         event.preventDefault();
         setUser({
             email: "Dash@dog.com",
-            name: "Dash",
-
+            name: "Dash"
         })
         setShowUserLogin(false);
     }
