@@ -33,8 +33,9 @@ const ProductCard = ({product}) => {
                                 Add
                             </button>
                         ) : (
-                            <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary -500/25 rounded select-none">
-                                <button onClick={() => setCount((prev) => Math.max(prev - 1, 0))} className="cursor-pointer text-md px-2 h-full" >
+                                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary -500/25 rounded select-none">
+                                    
+                                <button onClick={() => {removeFromCart(product._id)}} className="cursor-pointer text-md px-2 h-full" >
                                     -
                                 </button>
                                 <span className="w-5 text-center">{cartItems[product._id]}</span>
