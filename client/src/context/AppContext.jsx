@@ -5,6 +5,9 @@ import { dummyProducts } from "../assets/assets";
 export const AppContext = createContext();
 
 export const AppContextProvider = ({ children }) => {
+
+    const currency = import.meta.VITE_CURRENCY;
+
     // this is the function we use when we want a link to go somewhere instead of an href
     const navigate = useNavigate();
     // state variables
