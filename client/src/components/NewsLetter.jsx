@@ -1,4 +1,4 @@
-const App = () => {
+const NewsLetter = () => {
     
     return (
         <div className="flex flex-col items-center justify-center text-center space-y-2">
@@ -20,3 +20,5 @@ const App = () => {
         </div>
     )
 }
+
+export default NewsLetter;
