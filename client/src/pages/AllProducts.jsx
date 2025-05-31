@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
 
 const AllProducts = () => {
 
-    const { products } = useAppContext();
+    const { products, searchQuery, setSearchQuery } = useAppContext();
     const [filteredProducts, setFilteredProducts] = useState([]);
+
+    useEffect(() => {
+        
+    },[])
 
   return (
       <div className="mt-16 flex flex-col">
