@@ -1,6 +1,8 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyProducts } from "../assets/assets";
+import toast from "react-hot-toast";
+
 // start with the export line, then allow it to automatically import createContext
 export const AppContext = createContext();
 
@@ -32,7 +34,7 @@ export const AppContextProvider = ({ children }) => {
             cartData[itemId] = 1;
         }
         setCartItems(cartData);
-        
+        toast.success("Added to Cart")
     }
 
     useEffect(() => {
