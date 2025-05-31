@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import {Toaster} from 'react-hot-toast';
+import Footer from './components/Footer';
 
 const App = () => {
   // to allow different rendering depending on whether it's the seller or not.
@@ -20,6 +21,7 @@ const App = () => {
           <Route path='/' element={<Home/> } />
         </Routes>
       </div>
+      <Footer />
     </div>
   )
 }
