@@ -1,3 +1,5 @@
+import { footerLinks } from "../assets/assets";
+
 const Footer = () => {
     // const linkSections = [
     //     {
@@ -22,7 +24,7 @@ const Footer = () => {
                     <p className="max-w-[410px] mt-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum unde quaerat eveniet cumque accusamus atque qui error quo enim fugiat?</p>
                 </div>
                 <div className="flex flex-wrap justify-between w-full md:w-[45%] gap-5">
-                    {linkSections.map((section, index) => (
+                    {footerLinks.map((section, index) => (
                         <div key={index}>
                             <h3 className="font-semibold text-base text-gray-900 md:mb-5 mb-2">{section.title}</h3>
                             <ul className="text-sm space-y-1">
