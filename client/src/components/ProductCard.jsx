@@ -27,13 +27,13 @@ const ProductCard = ({product}) => {
                     </p>
                     <div onClick={(e) => { e.stopPropagation(); }} className="text-primary">
                         {!cartItems[product._id] ? (
-                            <button className="flex items-center justify-center gap-1 bg-primary-100 border border-primary-300 md:w-[80px] w-[64px] h-[34px] rounded text-primary-600 font-medium"
+                            <button className="flex items-center justify-center gap-1 bg-primary-100 border border-primary-300 md:w-[80px] w-[64px] h-[34px] rounded text-primary-600 font-medium cursor-pointer "
                                 onClick={() => addToCart(product._id)} >
                                 <img src={assets.cart_icon} alt="cart icon" className="" />
                                 Add
                             </button>
                         ) : (
-                                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary -500/25 rounded select-none">
+                                <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary-500/25 rounded select-none">
                                     
                                 <button onClick={() => {removeFromCart(product._id)}} className="cursor-pointer text-md px-2 h-full" >
                                     -

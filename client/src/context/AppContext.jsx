@@ -26,10 +26,10 @@ export const AppContextProvider = ({ children }) => {
     }
 
 // Add Products to Cart
-    const addToCart = () => {
+    const addToCart = (itemId) => {
         let cartData = structuredClone(cartItems);
         if (cartData[itemId]) {
-            cartData[itemId] += 1;
+            cartData[itemId] += 1; 
         } else {
             cartData[itemId] = 1;
         }
