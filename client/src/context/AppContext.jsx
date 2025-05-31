@@ -16,7 +16,7 @@ export const AppContextProvider = ({ children }) => {
     const [user, setUser] = useState(false);
     const [isSeller, setIsSeller] = useState(false);
     const [showUserLogin, setShowUserLogin] = useState(false);
-    const [products, setProducts] = useState(false);
+    const [products, setProducts] = useState([]);
     
     const [cartItems, setCartItems] = useState({});
 
@@ -46,7 +46,7 @@ export const AppContextProvider = ({ children }) => {
     } 
 
     useEffect(() => {
-        fetchProducts()
+        fetchProducts();
     }, [])
     
     // Remove Product from Cart
