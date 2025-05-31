@@ -19,6 +19,12 @@ const ProductCategory = () => {
                   <div className="w-16 h-0.5 bg-primary rounded-full"></div>
               </div>
           )}
+          {filteredProducts.length > 0 ?(
+              <div className=""></div>
+          ) : (
+            <div className=""></div>
+          )
+          }
     </div>
   )
 }
