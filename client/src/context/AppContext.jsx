@@ -19,6 +19,7 @@ export const AppContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     
     const [cartItems, setCartItems] = useState({});
+    const [searchQuery, setSearchQuery] = useState({});
 
 // Fetch All Products
     const fetchProducts = async () => {
@@ -63,7 +64,7 @@ export const AppContextProvider = ({ children }) => {
     }
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
-    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart, cartItems, setCartItems }
+    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart, cartItems, setCartItems, searchQuery, setSearchQuery }
 
     return <AppContext.Provider value={value}>
         {children}
