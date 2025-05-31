@@ -11,7 +11,7 @@ export const AppContextProvider = ({ children }) => {
     const [user, setUser] = useState(false);
     const [isSeller, setIsSeller] = useState(false);
     const [showUserLogin, setShowUserLogin] = useState(false);
-    const [product, setProducts] = useState(false);
+    const [products, setProducts] = useState(false);
 
     const fetchProducts = async () => {
         setProducts(dummyProducts)
@@ -22,7 +22,7 @@ export const AppContextProvider = ({ children }) => {
     },[])
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
-    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin}
+    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products}
 
     return <AppContext.Provider value={value}>
         {children}
