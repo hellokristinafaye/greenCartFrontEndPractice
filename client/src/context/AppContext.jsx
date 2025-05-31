@@ -47,7 +47,15 @@ export const AppContextProvider = ({ children }) => {
 
     useEffect(() => {
         fetchProducts()
-    },[])
+    }, [])
+    
+    // Remove Product from Cart
+    const removeFromCart = (itemId) => {
+        let cartData = structuredClone(cartItems);
+        if (cartData[itemId]) {
+             cartData[itemId] -= 1;
+        }
+    }
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
     const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem }
