@@ -53,12 +53,17 @@ export const AppContextProvider = ({ children }) => {
     const removeFromCart = (itemId) => {
         let cartData = structuredClone(cartItems);
         if (cartData[itemId]) {
-             cartData[itemId] -= 1;
+            cartData[itemId] -= 1;
+            if (cartData[itemId] === 0) {
+                delete cartData[itemId];
+            }
         }
+        toast.success("Removed from Cart")
+        setCartItems(cartData);
     }
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
-    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem }
+    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart }
 
     return <AppContext.Provider value={value}>
         {children}
