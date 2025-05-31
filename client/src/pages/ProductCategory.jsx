@@ -16,6 +16,7 @@ const ProductCategory = () => {
           {searchCategory && (
               <div className="">
                   <p className="">{searchCategory.text.toUpperCase()}</p>
+                  <div className="w-16 h-0.5 bg-primary rounded-full"></div>
               </div>
           )}
     </div>
