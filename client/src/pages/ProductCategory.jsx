@@ -27,7 +27,10 @@ const ProductCategory = () => {
                   ))}
               </div>
           ) : (
-            <div className=""></div>
+                //   if the category is empty
+            <div className="flex items-center justify-center h-[60vh]">
+                      
+            </div>
           )
           }
     </div>
