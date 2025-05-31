@@ -11,7 +11,7 @@ const BottomBanner = () => {
               <div className="">
                   <h1 className="text-2xl md:text-3xl font-semibold text-primary mb-6">Why Are We the Best?</h1>
                   {features.map((feature, index) => (
-                      <div className="" key={index} >
+                      <div className="flex items-center gap-4 mt-2" key={index} >
                           <img src={feature.icon} alt={feature.title} className="md:w-11 w-9" />
                       </div>
                   ))}
