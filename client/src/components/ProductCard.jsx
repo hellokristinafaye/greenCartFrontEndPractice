@@ -5,7 +5,7 @@ import { useAppContext } from '../context/AppContext';
 const ProductCard = ({product}) => {
     const [count, setCount] = React.useState(0);
 
-    const { currency, addToCart, updateCartItem, removeFromCart, navigate } = useAppContext();
+    const { currency, addToCart, updateCartItem, removeFromCart, navigate, cartItems, setCartItems } = useAppContext();
 
     return (
         <div className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full">
@@ -35,7 +35,7 @@ const ProductCard = ({product}) => {
                                 <button onClick={() => setCount((prev) => Math.max(prev - 1, 0))} className="cursor-pointer text-md px-2 h-full" >
                                     -
                                 </button>
-                                <span className="w-5 text-center">{count}</span>
+                                <span className="w-5 text-center">{cartItems[product._id]}</span>
                                 <button onClick={() => setCount((prev) => prev + 1)} className="cursor-pointer text-md px-2 h-full" >
                                     +
                                 </button>
