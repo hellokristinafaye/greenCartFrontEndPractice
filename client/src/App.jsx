@@ -6,7 +6,6 @@ import {Toaster} from 'react-hot-toast';
 import Footer from './components/Footer';
 import { useAppContext } from './context/AppContext';
 import Login from './components/Login';
-// import Login from './components/Login';
 
 const App = () => {
   // to allow different rendering depending on whether it's the seller or not.
@@ -18,9 +17,8 @@ const App = () => {
     <div>
 
       {isSellerPath ? null : <Navbar />}
-      {/* {showUserLogin ? <Login /> : null } */}
+      {showUserLogin ? <Login /> : null }
 
-<Login />
       <Toaster />
       
       <div className= {`${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}`}>
