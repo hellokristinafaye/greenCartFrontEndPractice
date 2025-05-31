@@ -1,11 +1,12 @@
 import React from 'react'
 
+const Login = () => {
+
     const [state, setState] = React.useState("login");
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [password, setPassword] = React.useState("");
-
-const Login = () => {
+    
   return (
       <div className="fixed top-0 bottom-0 left-0 right-0 z-30 flex items-center text-sm text-grey-600 bg-black/50">
            <form className="flex flex-col gap-4 m-auto items-start p-8 py-12 w-80 sm:w-[352px] rounded-lg shadow-xl border border-gray-200 bg-white">
