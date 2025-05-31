@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useAppContext } from '../context/AppContext'
 
 const AllProducts = () => {
 
     const { products } = useAppContext();
+    const [filteredProducts, setFilteredProducts] = useState([]);
 
   return (
       <div className="mt-16 flex flex-col">
@@ -11,6 +12,11 @@ const AllProducts = () => {
               <p className="text-2xl font-medium uppercase">All Products</p>
               <div className="w-16 h-0.5 bg-primary rounded-full"></div>
           </div>
+
+          <div className="">
+              
+        </div>
+
     </div>
   )
 }
