@@ -1,5 +1,5 @@
 import React from 'react'
-import {assets} from '../assets/assets'
+import {assets, features} from '../assets/assets'
 
 const BottomBanner = () => {
   return (
@@ -10,6 +10,11 @@ const BottomBanner = () => {
           <div className="absolute inset-0 flex flex-col items-center md:items-end md:justify-center pt-16 md:pt-0 md:pr-24">
               <div className="">
                   <h1 className="text-2xl md:text-3xl font-semibold text-primary mb-6">Why Are We the Best?</h1>
+                  {features.map((feature, index) => (
+                      <div className="" key={index} >
+                          <img src={feature.icon} alt={feature.title} className="md:w-11 w-9" />
+                      </div>
+                  ))}
               </div>
           </div>
     </div>
