@@ -13,7 +13,11 @@ const ProductCategory = () => {
     
   return (
       <div>
-          
+          {searchCategory && (
+              <div className="">
+                  <p className="">{searchCategory.text.toUpperCase()}</p>
+              </div>
+          )}
     </div>
   )
 }
