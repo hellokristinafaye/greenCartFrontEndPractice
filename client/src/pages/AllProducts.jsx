@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
+import ProductCard from '../components/ProductCard';
 
 const AllProducts = () => {
 
@@ -24,7 +25,9 @@ const AllProducts = () => {
           </div>
 
           <div className="">
-              
+              {filteredProducts.filter((product) => product.inStock).map((product, index) => (
+                  <ProductCard key={} />
+              ))}
         </div>
 
     </div>
