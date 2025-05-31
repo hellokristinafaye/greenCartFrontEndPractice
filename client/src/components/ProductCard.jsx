@@ -1,16 +1,8 @@
 import React from 'react'
 
-const ProductCard = () => {
+const ProductCard = ({product}) => {
     const [count, setCount] = React.useState(0);
 
-    const product = {
-        name: "Casual Shoes",
-        category: "Sports",
-        price: 100,
-        offerPrice: 80,
-        rating: 4,
-        image: "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png",
-    };
 
     return (
         <div className="border border-gray-500/20 rounded-md md:px-4 px-3 py-2 bg-white min-w-56 max-w-56 w-full">
