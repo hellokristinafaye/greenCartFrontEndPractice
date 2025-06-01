@@ -11,6 +11,8 @@ const ProductDetails = () => {
     const [relatedProducts, setRelatedProducts] = useState(product.images[0]);
     const [thumbnail, setThumbnail] = useState(null);
 
+    const product = products.find((item)=> item._id === id)
+
     return product && (
         <div className="max-w-6xl w-full px-6">
             <p>
