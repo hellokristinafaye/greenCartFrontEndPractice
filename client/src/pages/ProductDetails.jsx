@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext';
 import { Link, useParams } from 'react-router-dom';
 import { assets } from '../assets/assets';
+import ProductCard from '../components/ProductCard';
 
 
 const ProductDetails = () => {
@@ -91,8 +92,12 @@ const ProductDetails = () => {
                     <div className="w-20 h-0.5 bg-primary rounded-full mt-2"></div>
                 </div>
                 {/* next step is to display the products in cardsg */}
+                <div className="">
+                    {relatedProducts.filter((product) => product.inStock).map((product, index) => (
+                        <ProductCard key={index} product={product} />
+                    ))}
+                </div>
             </div>
-
         </div>
     );
 };
