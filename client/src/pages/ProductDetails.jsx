@@ -1,4 +1,4 @@
-const App = () => {
+const ProductDetails = () => {
 
     const product = {
         name: "Casual Shoes",
@@ -89,3 +89,5 @@ const App = () => {
         </div>
     );
 };
+
+export default ProductDetails; 
