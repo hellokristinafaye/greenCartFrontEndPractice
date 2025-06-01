@@ -7,7 +7,7 @@ const Navbar = () => {
 
     const [open, setOpen] = React.useState(false)
     // allows us to use data from context, i.e. what links to display in the nav menu
-    const { user, setUser, setShowUserLogin, navigate, setSearchQuery, searchQuery } = useAppContext();
+    const { user, setUser, setShowUserLogin, navigate, setSearchQuery, searchQuery, getCartCount } = useAppContext();
     // log out function
     const logout = async () => {
         setUser(null);
@@ -39,9 +39,13 @@ const Navbar = () => {
                     <img src={assets.search_icon} alt="search" className="w-4 h-4" />
                 </div>
 
-                <div onClick={()=> navigate('/cart')} className="relative cursor-pointer">
+                <div onClick={() => navigate('/cart')} className="relative cursor-pointer">
+                    
+
                     <img src={assets.cart_icon} alt="cart" className="w-6 opacity-80" />
-                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">3</button>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount() }</button>
+
+
                 </div>
             {/* conditional based on user being logged in or not  */}
                 {!user ?
