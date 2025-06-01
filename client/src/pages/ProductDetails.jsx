@@ -90,6 +90,7 @@ const ProductDetails = () => {
                     <p className="text-3xl font-medium">Related Products</p>
                     <div className="w-20 h-0.5 bg-primary rounded-full mt-2"></div>
                 </div>
+                {/* next step is to display the products in cardsg */}
             </div>
 
         </div>
