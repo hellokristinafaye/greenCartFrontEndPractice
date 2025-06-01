@@ -20,6 +20,10 @@ const ProductDetails = () => {
         }
     }, [products])
 
+    useEffect(() => {
+        setThumbnail(product?.image[0] ? product.image[0] : null)
+    }, [product])
+
     return product && (
         <div className="max-w-6xl w-full px-6">
             <p>
