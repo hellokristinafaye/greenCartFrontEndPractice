@@ -29,7 +29,7 @@ const ProductDetails = () => {
     return product && (
         <div className="mt-12">
             <p>
-                <Link>Home</Link> /
+                <Link to={"/"}>Home</Link> /
                 <span> Products</span> /
                 <span> {product.category}</span> /
                 <span className="text-indigo-500"> {product.name}</span>
