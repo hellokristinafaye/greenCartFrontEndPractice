@@ -85,6 +85,12 @@ const ProductDetails = () => {
                 </div>
             </div>
 {/* Related Products */}
+            <div className="">
+                <div className="">
+                    <p className="">Related Products</p>
+                    <div className="w-20 h-0.5 bg-primary rounded-full mt-2"></div>
+                </div>
+            </div>
 
         </div>
     );
