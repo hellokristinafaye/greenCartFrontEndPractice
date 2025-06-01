@@ -43,7 +43,7 @@ const Navbar = () => {
                     
 
                     <img src={assets.cart_icon} alt="cart" className="w-6 opacity-80" />
-                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount() }</button>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[25px] h-[25px] rounded-full">{getCartCount() }</button>
 
 
                 </div>
