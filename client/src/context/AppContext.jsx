@@ -63,6 +63,15 @@ export const AppContextProvider = ({ children }) => {
         setCartItems(cartData);
     }
 
+    // Get Cart Item Count
+    const getCartCount = () => {
+        let totalCount = 0;
+        for (const item in cartItems) {
+            totalCount += cartItems[item];
+        }
+        return totalCount;
+    }
+
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
     const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart, cartItems, setCartItems, searchQuery, setSearchQuery }
 
