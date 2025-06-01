@@ -13,6 +13,7 @@ const ProductDetails = () => {
 
     const product = products.find((item) => item._id === id);
 
+    // this checks if the IS a product, and if so filters thru the object to check if any of the categories match the item's category. Then Related Products is populated, but only with 5 items.
     useEffect(() => {
         if (products.length > 0) {
             let productsCopy = products.slice();
@@ -20,12 +21,13 @@ const ProductDetails = () => {
         }
     }, [products])
 
+    // this sets the thumbnail if the product has an image
     useEffect(() => {
         setThumbnail(product?.image[0] ? product.image[0] : null)
     }, [product])
 
     return product && (
-        <div className="max-w-6xl w-full px-6">
+        <div className="mt-12">
             <p>
                 <span>Home</span> /
                 <span> Products</span> /
