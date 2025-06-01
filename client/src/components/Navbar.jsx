@@ -40,12 +40,8 @@ const Navbar = () => {
                 </div>
 
                 <div onClick={() => navigate('/cart')} className="relative cursor-pointer">
-                    
-
                     <img src={assets.cart_icon} alt="cart" className="w-6 opacity-80" />
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[25px] h-[25px] rounded-full">{getCartCount() }</button>
-
-
                 </div>
             {/* conditional based on user being logged in or not  */}
                 {!user ?
@@ -67,10 +63,17 @@ const Navbar = () => {
                     )}
             </div>
 
-            <button onClick={() => open ? setOpen(false) : setOpen(true)} aria-label="Menu" className="sm:hidden">
-                {/* Menu Icon */}
-                <img src={assets.menu_icon} alt="menu" className="" />
-            </button>
+            {/* hidden unless in mobile view */}
+            <div className="flex items-center gap-6 sm:hidden">
+                 <div onClick={() => navigate('/cart')} className="relative cursor-pointer">
+                        <img src={assets.cart_icon} alt="cart" className="w-6 opacity-80" />
+                        <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[25px] h-[25px] rounded-full">{getCartCount() }</button>
+                    </div>
+                    <button onClick={() => open ? setOpen(false) : setOpen(true)} aria-label="Menu" className="">
+                    {/* Menu Icon */}
+                    <img src={assets.menu_icon} alt="menu" className="" />
+                </button>
+            </div>
 
             {/* Mobile Menu, hidden on full screen */}
 
