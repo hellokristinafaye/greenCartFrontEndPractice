@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext';
 import { useParams } from 'react-router-dom';
 
@@ -11,7 +11,11 @@ const ProductDetails = () => {
     const [relatedProducts, setRelatedProducts] = useState(product.images[0]);
     const [thumbnail, setThumbnail] = useState(null);
 
-    const product = products.find((item)=> item._id === id)
+    const product = products.find((item) => item._id === id);
+
+    useEffect(() => {
+        
+    }, [products])
 
     return product && (
         <div className="max-w-6xl w-full px-6">
