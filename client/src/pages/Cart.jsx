@@ -132,7 +132,7 @@ const Cart = () => {
                     </p>
                 </div>
 
-                <button className="w-full py-3 mt-6 cursor-pointer bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">
+                <button onClick={placeOrder} className="w-full py-3 mt-6 cursor-pointer bg-indigo-500 text-white font-medium hover:bg-indigo-600 transition">
                     {paymentOption === "COD" ? "Place Order" : "Proceed to Checkout"}
                 </button>
             </div>
