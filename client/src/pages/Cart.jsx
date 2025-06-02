@@ -1,8 +1,12 @@
 import { useState } from "react"
 import { useAppContext } from "../context/AppContext"
+import { dummyAddress } from "../assets/assets";
 
 const Cart = () => {
     const { products, currency, cartItems, removeFromCart, getCartCount, updateCartItems, navigate, getCartAmount } = useAppContext();
+
+    const [cartArray, setCartArray] = useState([]);
+    const [addresses, setAddresses] = useState(dummyAddress);
 
     const [showAddress, setShowAddress] = useState(false)
 
