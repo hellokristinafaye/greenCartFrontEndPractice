@@ -39,7 +39,7 @@ export const AppContextProvider = ({ children }) => {
     }
 
     // Update Cart Item Quantity
-    const updateCartItem = (itemId, quantity) => {
+    const updateCartItems = (itemId, quantity) => {
         let cartData = structuredClone(cartItems);
         cartData[itemId] = quantity;
         setCartItems(cartData);
@@ -86,7 +86,7 @@ export const AppContextProvider = ({ children }) => {
 
 
     // this is where we'll put all the state variables we want to make available elsewhere (Not declaring them here. That happens above/outisde this function)
-    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItem, removeFromCart, cartItems, setCartItems, searchQuery, setSearchQuery, getCartAmount, getCartCount }
+    const value = {navigate, user, setUser, isSeller, setIsSeller, showUserLogin, setShowUserLogin, products, currency, addToCart, updateCartItems, removeFromCart, cartItems, setCartItems, searchQuery, setSearchQuery, getCartAmount, getCartCount }
 
     return <AppContext.Provider value={value}>
         {children}
