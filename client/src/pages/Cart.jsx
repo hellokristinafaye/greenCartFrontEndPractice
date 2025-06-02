@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useAppContext } from "../context/AppContext"
 import { dummyAddress } from "../assets/assets";
 
@@ -21,6 +21,12 @@ const Cart = () => {
         }
         setCartArray(tempArray)
     }
+
+    useEffect(() => {
+        if (products.length > 0 && cartItems) {
+            getCart()
+        }
+    }, [products, cartItems])
  
     return (
         <div className="flex flex-col md:flex-row py-16 max-w-6xl w-full px-6 mx-auto">
