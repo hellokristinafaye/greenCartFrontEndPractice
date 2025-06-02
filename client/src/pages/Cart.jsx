@@ -11,6 +11,15 @@ const Cart = () => {
     const [selectedAddress, setSelectedAddress] = useState(dummyAddress[0]);
     const [paymentOption, setPaymentOption] = useState("COD");
 
+    // to display all the products in the cart
+    const getCart = () => {
+        let tempArray = [];
+        for (const key in cartItems) {
+            const product = products.find((item) => item._id)
+            product.quantity = cartItems[key]
+            tempArray.push(product)
+        }
+    }
  
     return (
         <div className="flex flex-col md:flex-row py-16 max-w-6xl w-full px-6 mx-auto">
