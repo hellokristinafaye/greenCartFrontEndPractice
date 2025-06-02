@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useAppContext } from "../context/AppContext"
 import { assets, dummyAddress } from "../assets/assets";
+import toast from "react-hot-toast";
 
 const Cart = () => {
     const { products, currency, cartItems, removeFromCart, getCartCount, updateCartItems, navigate, getCartAmount } = useAppContext();
@@ -20,6 +21,11 @@ const Cart = () => {
             tempArray.push(product)
         }
         setCartArray(tempArray)
+    }
+
+    // Place Order placeholder - logic to come during backend development
+    const placeOrder = async () => {
+        toast.success("Free.99!")
     }
 
     useEffect(() => {
