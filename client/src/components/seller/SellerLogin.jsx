@@ -29,6 +29,7 @@ const SellerLogin = () => {
                   <p className="">Password</p>
                   <input type="password" placeholder="Enter Your Password" className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary" required />
               </div>
+                <button className="bg-primary text-white w-full py-2 rounded-md cursor-pointer">Login</button>
         </div>
 
     </form>
