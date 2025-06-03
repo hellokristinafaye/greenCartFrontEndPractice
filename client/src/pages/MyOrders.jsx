@@ -49,7 +49,7 @@ const MyOrders = () => {
                               <p className="">Date: {new Date(order.createdAt).toLocaleDateString()}</p>
                           </div>
 
-                          <p className="">
+                          <p className="text-primary text-lg font-medium">
                              Amount: {currency}${item.product.offerPrice * item.quantity}
                           </p>
 
