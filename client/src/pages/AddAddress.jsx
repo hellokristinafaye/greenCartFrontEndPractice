@@ -7,7 +7,7 @@ const inputfield = (() => (
 
 const AddAddress = () => {
   return (
-      <div>
+      <div className="mt-16 pb-16">
           
     </div>
   )
