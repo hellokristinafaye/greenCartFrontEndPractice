@@ -59,7 +59,7 @@ const AddAddress = () => {
                     
                     <div className="grid grid-cols-2 gap-4">
                           <Inputfield handleChange={handleChange} address={address} name='city'type="text" placeholder="City" />
-                          <Inputfield handleChange={handleChange} address={address} name='country'type="text" placeholder="Country" />
+                          <Inputfield handleChange={handleChange} address={address} name='state'type="text" placeholder="State" />
                       </div>
 
                     <div className="grid grid-cols-2 gap-4">
