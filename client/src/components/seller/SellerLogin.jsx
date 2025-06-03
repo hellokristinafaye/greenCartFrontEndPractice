@@ -18,7 +18,7 @@ const SellerLogin = () => {
     },[isSeller])
 
   return !isSeller && (
-      <form onSubmit={onSubmitHandler}>
+      <form onSubmit={onSubmitHandler} className="min-h-screen flex items-center text-sm text-gray-600">
           
     </form>
   )
