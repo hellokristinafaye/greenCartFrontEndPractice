@@ -40,7 +40,7 @@ const Orders = () => {
                             {order.address.firstName} {order.address.lastName}</p>
                         
                         <p>{order.address.street}, {order.address.city},</p>
-                        <p>{order.address.state},{order.address.zipcode}, {order.address.country}</p>
+                        <p>{order.address.state}, {order.address.zipcode}, {order.address.country}</p>
                         <p className=""></p>
                         <p className="">{order.address.phone }</p>
                     </div>
