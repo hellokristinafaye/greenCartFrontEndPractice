@@ -6,6 +6,11 @@ const SellerLogin = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    const onSubmitHandler = async (event) => {
+        event.preventDefault();
+        setIsSeller(true);
+    }
+
     useEffect(() => {
         if (isSeller) {
             navigate('/seller')
@@ -13,7 +18,7 @@ const SellerLogin = () => {
     },[isSeller])
 
   return !isSeller && (
-      <form>
+      <form onSubmit={onSubmitHandler}>
           
     </form>
   )
