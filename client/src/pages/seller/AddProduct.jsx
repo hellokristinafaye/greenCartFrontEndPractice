@@ -3,7 +3,7 @@ import { assets } from '../../assets/assets';
 
 const AddProduct = () => {
 
-    const [files, setfiles] = useState([]);
+    const [files, setFiles] = useState([]);
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
@@ -23,8 +23,16 @@ const AddProduct = () => {
                     <div className="flex flex-wrap items-center gap-3 mt-2">
                       {Array(4).fill('').map((_, index) => (
                             // I guess this is the bit that accepts image uploads? 
-                            <label key={index} htmlFor={`image${index}`}>
-                                <input accept="image/*" type="file" id={`image${index}`} hidden />
+                          <label key={index} htmlFor={`image${index}`}>
+                              
+                              <input onChange={(e) => {
+                                  const updatedFiles = [...files];
+                                  updatedFiles[index] = e.target.files[0];
+                                //   so the images will be stored in the setFiles state
+                                  setFiles(updatedFiles) 
+                              } }
+                                  accept="image/*" type="file" id={`image${index}`} hidden />
+                              
                               <img className="max-w-24 cursor-pointer"
                                   src={files[index] ? URL.createObjectURL(files[index]) : assets.upload_area }
                                   alt="uploadArea" width={100} height={100} />
