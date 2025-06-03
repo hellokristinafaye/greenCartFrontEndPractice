@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { assets, categories } from '../../assets/assets';
+import toast from 'react-hot-toast';
 
 const AddProduct = () => {
 
@@ -13,6 +14,12 @@ const AddProduct = () => {
     const onSubmitHandler = async (event) => {
         event.preventDefault();
 
+    }
+  
+  const addProductButton = async () => {
+    if (name.length > 0 && price > 0 && offerPrice > 0) {
+      toast.success("Product Added!")
+    }
     }
 
   return (
@@ -84,7 +91,7 @@ const AddProduct = () => {
                           id="offer-price" type="number" placeholder="0" className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40" required />
                     </div>
                 </div>
-                <button className="px-8 py-2.5 bg-primary hover:bg-primary-dull text-white font-medium rounded cursor-pointer">ADD</button>
+                <button onClick={()=>addProductButton()} className="px-8 py-2.5 bg-primary hover:bg-primary-dull text-white font-medium rounded cursor-pointer">ADD</button>
             </form>
         </div>
   )
