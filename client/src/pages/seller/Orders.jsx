@@ -36,7 +36,7 @@ const Orders = () => {
                     </div>
 
                     <div className="text-sm md:text-base text-black/60 ">
-                        <p className='font-medium mb-1'>{order.address.firstName} {order.address.lastName}</p>
+                        <p className='text-black/80'>{order.address.firstName} {order.address.lastName}</p>
                         <p>{order.address.street}, {order.address.city}, {order.address.state},{order.address.zipcode}, {order.address.country}</p>
                     </div>
 
