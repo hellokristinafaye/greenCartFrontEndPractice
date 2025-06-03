@@ -1,8 +1,11 @@
 import React from 'react'
+import { useAppContext } from '../../context/AppContext'
 
 const Orders = () => {
 
-    
+    const { currency } = useAppContext();
+
+    const []
 
   return (
       <div className="md:p-10 p-4 space-y-4">
