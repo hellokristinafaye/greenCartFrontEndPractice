@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 
 // Input Field Component
@@ -16,7 +16,18 @@ const inputfield = ({type, placeholder, name, handleChange, address}) => (
 
 const AddAddress = () => {
 
-    
+    const [address, setAddress] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        street: '',
+        city: '',
+        state: '',
+        zipcode: '',
+        country: '',
+        phoneg: '',
+
+    })
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
