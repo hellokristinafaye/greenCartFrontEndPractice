@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 
 // Input Field Component
-const inputfield = ({type, placeholder, name, handleChange, address}) => (
+const Inputfield = ({type, placeholder, name, handleChange, address}) => (
     <input
         type={type}
         placeholder={placeholder}
@@ -25,9 +25,17 @@ const AddAddress = () => {
         state: '',
         zipcode: '',
         country: '',
-        phoneg: '',
-
+        phone: '',
     })
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+
+        setAddress((prevAddress) => ({
+            ...prevAddress,
+            [name]: value,
+        }))
+    }
 
     const onSubmitHandler = async (e) => {
         e.preventDefault();
@@ -41,8 +49,8 @@ const AddAddress = () => {
               <div className="flex-1 max-w-md">
                   <form onSubmit={onSubmitHandler} className="space-y-3 mt-6 text-sm">
                       <div className="">
-                          <inputfield handleChange={handleChange} address={address} name='firstName'type="text" placeholder="First Name" />
-                          <inputfield handleChange={handleChange} address={address} name='lastName'type="text" placeholder="Last Name" />
+                          <Inputfield handleChange={handleChange} address={address} name='firstName'type="text" placeholder="First Name" />
+                          <Inputfield handleChange={handleChange} address={address} name='lastName'type="text" placeholder="Last Name" />
                       </div>
                   </form>
               </div>
