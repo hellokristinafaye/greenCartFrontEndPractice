@@ -6,7 +6,7 @@ import { useAppContext } from "../../context/AppContext";
 
 const SellerLayout = () => {
 
-    const { isSeller } = useAppContext();
+    const { setIsSeller } = useAppContext();
 
 
     const sidebarLinks = [
@@ -14,6 +14,10 @@ const SellerLayout = () => {
         { name: "Product List", path: "/seller/product-list", icon: assets.product_list_icon },
         { name: "Orders", path: "/seller/orders", icon: assets.order_icon },
     ];
+
+    const logout = async () => {
+        setIsSeller(false)
+    }
 
     return (
         <>
@@ -23,7 +27,7 @@ const SellerLayout = () => {
                 </Link>
                 <div className="flex items-center gap-5 text-gray-500">
                     <p>Hello Seller!</p>
-                    <button className='border rounded-full text-sm px-4 py-1'>Logout</button>
+                    <button onClick={logout} className='border rounded-full text-sm px-4 py-1'>Logout</button>
                 </div>
             </div>
             <div className="md:w-64 w-16 border-r h-[550px] text-base border-gray-300 pt-4 flex flex-col transition-all duration-300">
