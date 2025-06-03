@@ -15,7 +15,7 @@ export const AppContextProvider = ({ children }) => {
     // state variables
     const [user, setUser] = useState(false);
     // set to true just so we don't have to keep logging in to work on it. Should also look into LocalStorage for this eventually. 
-    const [isSeller, setIsSeller] = useState(true);
+    const [isSeller, setIsSeller] = useState(false);
     const [showUserLogin, setShowUserLogin] = useState(false);
     const [products, setProducts] = useState([]);
     
