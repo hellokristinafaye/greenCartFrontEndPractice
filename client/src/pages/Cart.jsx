@@ -26,7 +26,10 @@ const Cart = () => {
     // Place Order placeholder - logic to come during backend development
     const placeOrder = async () => {
         toast.success("Free.99!");
-        setCartArray([]);
+        // setCartArray([]);
+        // werid that it doesn't stay empty?? 
+        // OK I dig this - so we gotta code an Order Confirmation page.
+        // navigate('/confirmation');
     }
 
     useEffect(() => {
