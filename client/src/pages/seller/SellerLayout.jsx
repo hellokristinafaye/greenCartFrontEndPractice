@@ -37,8 +37,8 @@ const SellerLayout = () => {
                     <NavLink to={item.path} key={item.name} end={item.path === '/seller'}
                             // isActive refers to which of the sidebar links is clicked
                         className={({ isActive }) => `flex items-center py-3 px-4 gap-3 
-                            ${isActive? "border-r-4 md:border-r-[6px] bg-indigo-500/10 border-indigo-500 text-indigo-500"
-                                : "hover:bg-gray-100/90 border-white text-gray-700"
+                            ${isActive? "border-r-4 md:border-r-[6px] bg-primary/10 border-primary text-primary"
+                                : "hover:bg-gray-100/90 border-white"
                             }`
                         }
                     >
