@@ -30,7 +30,9 @@ const SellerLayout = () => {
                     <button onClick={logout} className='border rounded-full text-sm px-4 py-1'>Logout</button>
                 </div>
             </div>
-            <div className="md:w-64 w-16 border-r h-[550px] text-base border-gray-300 pt-4 flex flex-col transition-all duration-300">
+
+            <div className="flex">
+                  <div className="md:w-64 w-16 border-r h-[550px] text-base border-gray-300 pt-4 flex flex-col transition-all duration-300">
                 {sidebarLinks.map((item, index) => (
                     <a href={item.path} key={index}
                         className={`flex items-center py-3 px-4 gap-3 
@@ -43,6 +45,7 @@ const SellerLayout = () => {
                         <p className="md:block hidden text-center">{item.name}</p>
                     </a>
                 ))}
+                </div>
             </div>
         </>
     );
