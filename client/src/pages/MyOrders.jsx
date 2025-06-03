@@ -36,7 +36,7 @@ const MyOrders = () => {
                                   <img src={item.product.image[0]} alt="" className="w-16 h-16" />
                               </div>
 
-                              <div className="">
+                              <div className="ml-4">
                                   <h2 className="">{item.product.name}</h2>
                                   <p className="">Category: {item.product.category}</p>
                               </div>
