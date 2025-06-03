@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
 import { useAppContext } from '../../context/AppContext'
+import { dummyOrders } from '../../assets/assets';
 
 const Orders = () => {
 
     const { currency } = useAppContext();
 
     const [orders, setOrders] = useState([]);
+
+    const fetchOrders = async () => {
+        setOrders(dummyOrders)
+    }
 
   return (
       <div className="md:p-10 p-4 space-y-4">
