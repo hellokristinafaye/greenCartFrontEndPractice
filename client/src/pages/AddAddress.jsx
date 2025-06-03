@@ -62,6 +62,11 @@ const AddAddress = () => {
                           <Inputfield handleChange={handleChange} address={address} name='country'type="text" placeholder="Country" />
                       </div>
 
+                    <div className="grid grid-cols-2 gap-4">
+                          <Inputfield handleChange={handleChange} address={address} name='zipcode'type="number" placeholder="Zip Code" />
+                          <Inputfield handleChange={handleChange} address={address} name='country'type="text" placeholder="Country" />
+                      </div>
+
                   </form>
               </div>
               <img src={assets.add_address_iamge} alt="Add Address" className="md:mr-16 mb-16 md:mt-0" />
