@@ -35,6 +35,11 @@ const MyOrders = () => {
                               <div className="bg-primary/10 p-4 rounded-lg">
                                   <img src={item.product.image[0]} alt="" className="w-16 h-16" />
                               </div>
+
+                              <div className="">
+                                  <h2 className="">{item.product.name}</h2>
+                              </div>
+
                           </div>
                       </div>
                   ))}
