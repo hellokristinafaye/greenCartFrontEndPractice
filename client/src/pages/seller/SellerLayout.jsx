@@ -1,6 +1,6 @@
 // nav and sidebar in all seller dashboard pages.
 
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 
@@ -47,6 +47,7 @@ const SellerLayout = () => {
                     </NavLink>
                 ))}
                 </div>
+                <Outlet />
             </div>
         </>
     );
