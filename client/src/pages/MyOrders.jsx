@@ -27,7 +27,7 @@ const MyOrders = () => {
                   <p className="flex justify-between md:items-center text-gray-400 md:font-medium max-md:flex-col">
                       <span className="">Order Id: {order._id}</span>
                       <span className="">Payment: {order.paymentType}</span>
-                      <span className="">Total Amount: {currency}${order.amount}</span>
+                      <span className="">Total Amount: {currency}{order.amount}</span>
                   </p>
                   {order.items.map((item, index) => (
                       <div key={index}
@@ -51,7 +51,7 @@ const MyOrders = () => {
                           </div>
 
                           <p className="text-primary text-lg font-medium">
-                             Amount: {currency}${item.product.offerPrice * item.quantity}
+                             Amount: {currency}{item.product.offerPrice * item.quantity}
                           </p>
 
                       </div>
