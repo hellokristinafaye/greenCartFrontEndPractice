@@ -11,12 +11,12 @@ const AddProduct = () => {
 
     const onSubmitHandler = async (event) => {
         event.preventDefault();
-        
+
     }
 
   return (
        <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll flex flex-col justify-between">
-            <form className="md:p-10 p-4 space-y-5 max-w-lg">
+            <form onSubmit={onSubmitHandler} className="md:p-10 p-4 space-y-5 max-w-lg">
                 <div>
                     <p className="text-base font-medium">Product Image</p>
                     <div className="flex flex-wrap items-center gap-3 mt-2">
