@@ -20,6 +20,10 @@ const SellerLogin = () => {
   return !isSeller && (
       <form onSubmit={onSubmitHandler} className="min-h-screen flex items-center text-sm text-gray-600">
           
+          <div className="">
+              <p className=""><span className="">Seller</span> Login</p>
+        </div>
+
     </form>
   )
 }
