@@ -42,7 +42,7 @@ const SellerLayout = () => {
                             }`
                         }
                     >
-                        {item.icon}
+                        <img src={item.icon} alt="" className="w-7 h-7" />
                         <p className="md:block hidden text-center">{item.name}</p>
                     </NavLink>
                 ))}
