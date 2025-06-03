@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { assets } from '../../assets/assets';
+import { assets, categories } from '../../assets/assets';
 
 const AddProduct = () => {
 
@@ -61,10 +61,11 @@ const AddProduct = () => {
                         onChange={(e) => setCategory(e.target.value)}
                       value={category}
                       id="category" className="outline-none md:py-2.5 py-2 px-3 rounded border border-gray-500/40">
-                        <option value="">Select Category</option>
-                        {[{ name: 'Electronics' }, { name: 'Clothing' }, { name: 'Accessories' }].map((item, index) => (
-                            <option key={index} value={item.name}>{item.name}</option>
-                        ))}
+                      <option value="">Select Category</option>
+                      {/* this populates with data from our categories array in the assets file */}
+                      {categories.map((item, index) => (
+                           <option key={index} value={item.path} className="">{item.path}</option>
+                       ))}
                     </select>
                 </div>
                 <div className="flex items-center gap-5 flex-wrap">
