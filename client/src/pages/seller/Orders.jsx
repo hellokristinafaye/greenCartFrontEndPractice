@@ -36,8 +36,11 @@ const Orders = () => {
                     </div>
 
                     <div className="text-sm md:text-base text-black/60 ">
-                        <p className='text-black/80'>{order.address.firstName} {order.address.lastName}</p>
-                        <p>{order.address.street}, {order.address.city}, {order.address.state},{order.address.zipcode}, {order.address.country}</p>
+                        <p className='text-black/80'>
+                            {order.address.firstName} {order.address.lastName}</p>
+                        
+                        <p>{order.address.street}, {order.address.city},</p>
+                        <p>{order.address.state},{order.address.zipcode}, {order.address.country}</p>
                     </div>
 
                     <p className="font-medium text-base my-auto text-black/70">${order.amount}</p>
