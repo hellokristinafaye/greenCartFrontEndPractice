@@ -67,6 +67,8 @@ const AddAddress = () => {
                           <Inputfield handleChange={handleChange} address={address} name='country'type="text" placeholder="Country" />
                       </div>
 
+                       <Inputfield handleChange={handleChange} address={address} name='phone'type="number" placeholder="Phone Number" />
+
                   </form>
               </div>
               <img src={assets.add_address_iamge} alt="Add Address" className="md:mr-16 mb-16 md:mt-0" />
