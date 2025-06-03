@@ -2,8 +2,16 @@ import React from 'react'
 import { assets } from '../assets/assets'
 
 // Input Field Component
-const inputfield = () => (
-    <input type="text" className="" />
+const inputfield = ({type, placeholder, name, handleChange, address}) => (
+    <input
+        type={type}
+        placeholder={placeholder}
+        onChange={handleChange}
+        name={name}
+        value={address[name]}
+        required
+        className=""
+    />
 )
 
 const AddAddress = () => {
