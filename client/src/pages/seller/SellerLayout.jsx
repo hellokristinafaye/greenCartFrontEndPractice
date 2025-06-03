@@ -1,5 +1,6 @@
 // nav and sidebar in all seller dashboard pages.
 
+import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 
 const SellerLayout = () => {
@@ -8,9 +9,9 @@ const SellerLayout = () => {
 
 
     const sidebarLinks = [
-        { name: "Dashboard", path: "/", icon: dashboardicon },
-        { name: "Overview", path: "/overview", icon: overviewicon },
-        { name: "Chat", path: "/chat", icon: chaticon },
+        { name: "Add Product", path: "/seller", icon: assets.add_icon },
+        { name: "Product List", path: "/seller/product-list", icon: assets.product_list_icon },
+        { name: "Orders", path: "/seller/orders", icon: assets.order_icon },
     ];
 
     return (
