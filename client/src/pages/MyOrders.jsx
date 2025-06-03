@@ -24,11 +24,20 @@ const MyOrders = () => {
 
           {myOrders.map((order, index) => (
               <div key={index} className="border border-gray-300 rounded-lg mb-10 p-4 py-5 max-w-4xl">
-                  <p className="">
+                  <p className="flex justify-between md:items-center text-gray-400 md:font-medium max-md:flex-col">
                       <span className="">Order Id: {order._id}</span>
                       <span className="">Payment: {order.paymentType}</span>
                       <span className="">Total Amount: {currency}${order.amount}</span>
                   </p>
+                  {order.items.map((item, index) => (
+                      <div className="">
+                          <div className="">
+                              <div className="">
+                                  <img src={item.product.image[0]} alt="" className="" />
+                              </div>
+                          </div>
+                      </div>
+                  ))}
             </div>
         ))}
 
