@@ -5,7 +5,7 @@ const Orders = () => {
 
     const { currency } = useAppContext();
 
-    const [orders, setOrders] = useState();
+    const [orders, setOrders] = useState([]);
 
   return (
       <div className="md:p-10 p-4 space-y-4">
