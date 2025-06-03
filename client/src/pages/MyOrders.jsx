@@ -30,7 +30,7 @@ const MyOrders = () => {
                       <span className="">Total Amount: {currency}${order.amount}</span>
                   </p>
                   {order.items.map((item, index) => (
-                      <div className="">
+                      <div key={index} className="">
                           
                           <div className="flex items-center mb-4 md:mb-0">
                               <div className="bg-primary/10 p-4 rounded-lg">
@@ -43,7 +43,7 @@ const MyOrders = () => {
                               </div>
                           </div>
 
-                          <div className="">
+                          <div className="text-primary text-lg font-medium">
                               <p className="">Quantity: {item.quantity || "1" }</p>
                               <p className="">Status: {order.status}</p>
                               <p className="">Date: {new Date(order.createdAt).toLocaleDateString()}</p>
