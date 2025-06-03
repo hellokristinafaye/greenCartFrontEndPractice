@@ -12,10 +12,10 @@ const SellerLogin = () => {
         }
     },[isSeller])
 
-  return (
-      <div>
+  return !isSeller && (
+      <form>
           
-    </div>
+    </form>
   )
 }
 
