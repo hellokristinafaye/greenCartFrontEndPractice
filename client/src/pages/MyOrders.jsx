@@ -31,7 +31,7 @@ const MyOrders = () => {
                   </p>
                   {order.items.map((item, index) => (
                       <div className="">
-                          <div className="">
+                          <div className="flex items-center mb-4 md:mb-0">
                               <div className="bg-primary/10 p-4 rounded-lg">
                                   <img src={item.product.image[0]} alt="" className="w-16 h-16" />
                               </div>
