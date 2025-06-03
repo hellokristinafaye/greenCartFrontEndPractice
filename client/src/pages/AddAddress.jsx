@@ -55,6 +55,7 @@ const AddAddress = () => {
                       </div>
 
                           <Inputfield handleChange={handleChange} address={address} name='email'type="email" placeholder="Email Address" />
+                          <Inputfield handleChange={handleChange} address={address} name='street'type="text" placeholder="Street" />
                     
 
                   </form>
