@@ -14,6 +14,7 @@ import AddAddress from './pages/AddAddress';
 import MyOrders from './pages/MyOrders';
 import SellerLogin from './components/seller/SellerLogin';
 import SellerLayout from './pages/seller/SellerLayout';
+import AddProduct from './pages/seller/AddProduct';
 
 const App = () => {
   // to allow different rendering depending on whether it's the seller or not.
@@ -39,7 +40,7 @@ const App = () => {
           <Route path='/add-address' element={<AddAddress/> } />
           <Route path='/my-orders' element={<MyOrders />} />
           <Route path='seller' element={isSeller? <SellerLayout /> : <SellerLogin />}>
-
+            <Route index element={isSeller ? <AddProduct /> : null} />
           </Route>
         </Routes>
       </div>
