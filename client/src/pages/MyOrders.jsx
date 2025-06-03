@@ -38,6 +38,7 @@ const MyOrders = () => {
 
                               <div className="">
                                   <h2 className="">{item.product.name}</h2>
+                                  <p className="">Category: {item.product.category}</p>
                               </div>
 
                           </div>
