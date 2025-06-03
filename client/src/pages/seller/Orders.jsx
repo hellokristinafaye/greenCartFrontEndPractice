@@ -41,6 +41,8 @@ const Orders = () => {
                         
                         <p>{order.address.street}, {order.address.city},</p>
                         <p>{order.address.state},{order.address.zipcode}, {order.address.country}</p>
+                        <p className=""></p>
+                        <p className="">{order.address.phone }</p>
                     </div>
 
                     <p className="font-medium text-base my-auto text-black/70">${order.amount}</p>
