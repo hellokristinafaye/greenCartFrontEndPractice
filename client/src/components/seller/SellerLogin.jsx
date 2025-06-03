@@ -25,9 +25,9 @@ const SellerLogin = () => {
 
               <div className="w-full">
                   <p className="">Email</p>
-                  <input type="email" className="" />
+                  <input type="email" placeholder="Enter Your Email" className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary" />
                   <p className="">Password</p>
-                  <input type="password" className="" />
+                  <input type="password" placeholder="Enter Your Password" className="border border-gray-200 rounded w-full p-2 mt-1 outline-primary" />
               </div>
         </div>
 
