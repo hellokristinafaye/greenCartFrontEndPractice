@@ -22,7 +22,7 @@ const SellerLayout = () => {
                     <img src={assets.logo} alt="logo" className="cursor-pointer w-34 md:w-38" />
                 </Link>
                 <div className="flex items-center gap-5 text-gray-500">
-                    <p>Hi! Admin</p>
+                    <p>Hello Seller!</p>
                     <button className='border rounded-full text-sm px-4 py-1'>Logout</button>
                 </div>
             </div>
