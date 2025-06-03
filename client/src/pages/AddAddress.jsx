@@ -16,6 +16,8 @@ const inputfield = ({type, placeholder, name, handleChange, address}) => (
 
 const AddAddress = () => {
 
+    
+
     const onSubmitHandler = async (e) => {
         e.preventDefault();
 
@@ -28,7 +30,8 @@ const AddAddress = () => {
               <div className="flex-1 max-w-md">
                   <form onSubmit={onSubmitHandler} className="space-y-3 mt-6 text-sm">
                       <div className="">
-                          <inputfield  />
+                          <inputfield handleChange={handleChange} address={address} name='firstName'type="text" placeholder="First Name" />
+                          <inputfield handleChange={handleChange} address={address} name='lastName'type="text" placeholder="Last Name" />
                       </div>
                   </form>
               </div>
