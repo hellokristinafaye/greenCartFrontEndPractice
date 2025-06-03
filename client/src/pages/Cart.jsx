@@ -25,7 +25,8 @@ const Cart = () => {
 
     // Place Order placeholder - logic to come during backend development
     const placeOrder = async () => {
-        toast.success("Free.99!")
+        toast.success("Free.99!");
+        setCartArray([]);
     }
 
     useEffect(() => {
