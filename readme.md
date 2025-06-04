@@ -1,6 +1,6 @@
 Overview:
 
-- MERN stack grocery delivery app
+- Front End of a MERN stack grocery delivery app
 
 Technologies Used:
 
@@ -25,4 +25,4 @@ Challenges:
 
 Future Development:
 
-- I probably won't develop this page any further, but may reference it in case future project require similar features.
+- Eventually I will add a backend. 
