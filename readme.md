@@ -13,6 +13,7 @@ Technologies Used:
 - PrebuiltUI components
 - React Hot Toast Notifications
 - Google Fonts
+- Hosted on Vercel
 
 Features:
 
