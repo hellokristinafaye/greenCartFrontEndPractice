@@ -24,6 +24,12 @@ const App = () => {
   // light/darkmode
   const [theme, setTheme] = useLocalStorage('theme', 'light');
 
+  const handleToggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+    console.log(theme);
+  }
+
+
 
   // to allow different rendering depending on whether it's the seller or not.
   const isSellerPath = useLocation().pathname.includes("seller");
@@ -31,13 +37,14 @@ const App = () => {
   const { showUserLogin, isSeller } = useAppContext();
 
   return (
-    <div className="text-default min-h-screen text-gray-700 bg-white ">
+    <div data-theme={theme} className="text-default min-h-screen text-gray-700 bg-white ">
+      <button onClick={handleToggleTheme} className="theme-change-btn">Theme Change</button>
 
       {isSellerPath ? null : <Navbar />}
       {showUserLogin ? <Login /> : null }
 
       <Toaster />
-      
+
       <div className= {`${isSellerPath ? "" : "px-6 md:px-16 lg:px-24 xl:px-32"}`}>
         <Routes>
           <Route path='/' element={<Home/> } />
