@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
+import useLocalStorage from "use-local-storage";
 
 // start with the export line, then allow it to automatically import createContext
 export const AppContext = createContext();
@@ -19,7 +20,7 @@ export const AppContextProvider = ({ children }) => {
     const [showUserLogin, setShowUserLogin] = useState(false);
     const [products, setProducts] = useState([]);
     
-    const [cartItems, setCartItems] = useState({});
+    const [cartItems, setCartItems] = useLocalStorage('gCart',{});
     const [searchQuery, setSearchQuery] = useState({});
 
 // Fetch All Products
