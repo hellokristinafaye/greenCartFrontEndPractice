@@ -17,8 +17,14 @@ import SellerLayout from './pages/seller/SellerLayout';
 import AddProduct from './pages/seller/AddProduct';
 import ProductList from './pages/seller/ProductList';
 import Orders from './pages/seller/Orders';
+import useLocalStorage from 'use-local-storage';
 
 const App = () => {
+
+  // light/darkmode
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
+
+
   // to allow different rendering depending on whether it's the seller or not.
   const isSellerPath = useLocation().pathname.includes("seller");
 
