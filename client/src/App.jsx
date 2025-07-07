@@ -17,18 +17,8 @@ import SellerLayout from './pages/seller/SellerLayout';
 import AddProduct from './pages/seller/AddProduct';
 import ProductList from './pages/seller/ProductList';
 import Orders from './pages/seller/Orders';
-import useLocalStorage from 'use-local-storage';
 
 const App = () => {
-
-  // light/darkmode
-  const [theme, setTheme] = useLocalStorage('theme', 'light');
-
-  const handleToggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    console.log(theme);
-  }
-
 
 
   // to allow different rendering depending on whether it's the seller or not.
@@ -37,8 +27,7 @@ const App = () => {
   const { showUserLogin, isSeller } = useAppContext();
 
   return (
-    <div data-theme={theme} className="text-default min-h-screen text-gray-700 bg-white ">
-      <button onClick={handleToggleTheme} className="theme-change-btn">Theme Change</button>
+    <div className="text-default min-h-screen text-gray-700 bg-white ">
 
       {isSellerPath ? null : <Navbar />}
       {showUserLogin ? <Login /> : null }
